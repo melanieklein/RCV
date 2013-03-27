@@ -1,0 +1,572 @@
+@import url(reset.css);
+
+@font-face {
+    font-family: 'OswaldBold';
+    src: url('../fonts/Oswald-Bold-webfont.eot');
+    src: url('../fonts/Oswald-Bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/Oswald-Bold-webfont.woff') format('woff'),
+         url('../fonts/Oswald-Bold-webfont.ttf') format('truetype'),
+         url('../fonts/Oswald-Bold-webfont.svg#OswaldBold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'OswaldRegular';
+    src: url('../fonts/Oswald-Regular-webfont.eot');
+    src: url('../fonts/Oswald-Regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/Oswald-Regular-webfont.woff') format('woff'),
+         url('../fonts/Oswald-Regular-webfont.ttf') format('truetype'),
+         url('../fonts/Oswald-Regular-webfont.svg#OswaldStencilRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+@font-face {
+    font-family: 'FolksRegular';
+    src: url('../fonts/Folks-Normal-webfont.eot');
+    src: url('../fonts/Folks-Normal-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/Folks-Normal-webfont.woff') format('woff'),
+         url('../fonts/Folks-Normal-webfont.ttf') format('truetype'),
+         url('../fonts/Folks-Normal-webfont.svg#FolksRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'FolksLightRegular';
+    src: url('../fonts/Folks-Light-webfont.eot');
+    src: url('../fonts/Folks-Light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/Folks-Light-webfont.woff') format('woff'),
+         url('../fonts/Folks-Light-webfont.ttf') format('truetype'),
+         url('../fonts/Folks-Light-webfont.svg#FolksLightRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@oswald: 'OswaldBold';
+@oswaldR: 'OswaldRegular';
+@folksR: 'FolksRegular';
+@folksL: 'FolksLightRegular';
+
+@grisFonce: #666666;
+@grisClair: #dfe6e4;
+@bleu: #009999;
+@bleuFonce: #005656;
+
+/*-----------------ELEMENTS GENERAUX-----------------*/
+
+body {
+	font-size:17px;
+	font-family: @folksR;
+	background-image:url('../img/motifBody.png');
+	background-repeat: repeat;
+	color: @grisFonce;
+	line-height: 1.2em;
+}
+
+.outliner {
+	display:none;
+}
+
+a {
+	color:@bleu;
+	text-decoration:none;
+
+	&:hover {
+		color:@bleuFonce;
+	}
+}
+
+
+.bloc {
+	background-color: @grisClair;
+	border: 2px solid @bleu;
+	padding:1em;
+	margin-bottom: 0.8em;
+}
+.blocTitre {
+	font-family: @oswald;
+	color: @grisFonce;
+	font-size: 1.4em;
+	font-variant: small-caps;
+	margin-bottom: 0.7em;
+	padding-left: 1em;
+}
+
+.grandTitre {
+	clear:both;
+	width:30.3em;
+	margin:0 auto;
+	position: absolute;
+	height: 75px;
+	background-image: url('../img/ruban.png');
+	background-repeat: no-repeat;
+	font-family: @oswald;
+	font-variant: small-caps;
+	font-size: 1.7em;
+	color: #FFFFFF;
+	text-shadow: 1px 1px 0px #222;
+	top: -1em;
+	left: -3.35em;
+	padding: 0.5em 0em 0em 3.4em;
+}
+
+.section {
+	width: 46em;
+	margin: 0 auto;
+	margin-top: 4em;
+	position: relative;
+	padding-top: 4em;
+}
+
+header {
+	height:10em;
+	background-image:url('../img/motifHeader.png');
+	background-repeat: repeat;
+}
+
+#menu {
+	background-color: @bleu;
+	padding: 1em 0em 2em 0em;
+	position:relative;
+	top:7em;
+
+	nav {
+		width: 46em;
+		margin: 0 auto;
+	}
+}
+#menu1,#menu2 {
+	float:left;
+	width: 15.9em;
+
+	li {
+		display:inline-block;
+		//width:6em;
+		margin: 0 1.1em 0 1.1em;
+		position:relative;
+
+		&:first-child {
+			margin-left:0;
+		}
+
+		&:last-child {
+			margin-right:0em;
+		}
+
+		&:hover div{
+		visibility: visible;
+	}
+	}
+
+	div {
+		visibility: hidden;
+	}
+}
+
+#menu1 {
+	margin-right:7.1em;
+}
+
+#menu2 {
+	margin-left:7.1em;
+}
+
+
+#menu a{
+	color:#FFFFFF;
+	&:hover {
+	background-color: @bleuFonce;
+	}
+}
+
+.sousMenu {
+	position: absolute;
+	background-color: @bleuFonce;
+	font-size: 0.9em;
+	width: 8em;
+	right: -3em;
+	top:2.2em;
+	padding:0.5em;
+	ul {
+		margin-top:0.8em;
+	}
+
+	li {
+		margin:0 !important;
+	
+		a:hover {
+			padding:0 !important;
+		}
+	}
+
+}
+
+#page {
+	background-color: #f2f8f8;
+	width:55em;
+	margin:0 auto;
+	display:table;
+}
+
+#logo {
+	position: absolute;
+	top: 3em;
+	right: 33.8em;
+	z-index:10;
+}
+
+/*-----------------PAGE ACCUEIL-----------------*/
+
+#videoIntro {
+	background-color:black;
+	height:396px;
+	width:652px;
+	margin: 0 auto;
+	margin-top: 2em;
+	margin-bottom: 2em;
+}
+
+#intro {
+	height:45.5em;
+
+	>p {
+	font-family: @oswald;
+	color: @bleu;
+	font-size: 1.4em;
+	text-align: center;
+	}
+}
+
+
+
+
+
+
+#appelInscription {
+	clear: both;
+	width:21em;
+	position:relative;
+	top:-6em;
+	right:-28.3em;
+	background-image: url('../sprite/camera.png');
+	background-repeat: no-repeat;
+	background-size: 50px auto;
+	padding-left: 5em;
+	height: 4.4em;
+	padding-top: 1em;
+
+	p {
+		font-family: @oswald;
+	}
+
+	a {
+	text-align: right;
+	}
+}
+
+
+#concours {
+	width: 12.2em;
+	float: left;
+	margin-right: 1.3em;
+	position: relative;
+
+	&:after{
+		content:'';
+		background: url('../img/icons/concours.png');
+		background-repeat: no-repeat;
+		height: 10em;
+		width:10em;
+		position:absolute;
+		top: -6em;
+		right: 8.5em;
+	}
+
+	ul {
+		margin: 0.8em 0 1em 0;
+	}
+	li {
+		margin-bottom: 1.16em;
+	}
+}
+
+#accesConcours {
+	float:right;
+}
+
+#forum {
+	background-image: url('../img/icons/forum.png');
+	background-repeat: no-repeat;
+	background-position: -35px -75px;
+	padding-bottom: 2em;
+
+	li {
+	background-image: url('../img/icons/news.png');
+	background-repeat: no-repeat;
+	padding-left: 1.5em;
+	margin-bottom: 0.8em;
+	}
+}
+
+
+#calendrier {
+	background-image: url('../img/icons/calendrier.png');
+	background-repeat: no-repeat;
+	background-position: -10px -90px;
+	padding-bottom: 2em;
+
+	span{
+		color: @grisFonce;
+		padding-right: 1em;
+		display: inline-block;
+		width:3.5em;
+	}
+
+	li {
+		margin-bottom: 0.8em;
+	}
+
+	ul {
+		margin-bottom: 1.5em;
+	}
+}
+
+.evenement {
+	display: inline-block;
+	width: 23em;
+	vertical-align: top;
+}
+
+#accesCalendrier {
+	float: right;
+}
+
+
+#calendrierForum {
+	float: left;
+	width: 30.2em;
+}
+
+#accesForum {
+	float: right;
+}
+
+#photos, #videos {
+	width: 22.3em;
+	float: left;
+	padding-top: 0.3em;
+}
+
+#photos {
+	clear:both;
+	margin-right: 1.4em;
+	background-image: url('../img/icons/photos.png');
+	background-repeat: no-repeat;
+	background-position: 0px 8px;
+}
+
+#videos {
+	background-image: url('../img/icons/videos.png');
+	background-repeat: no-repeat;
+	background-position: 0px 3px;
+}
+
+/*-----------------PAGE CONTACT-----------------*/
+
+#introContact {
+	text-align: center;
+	width: 30em;
+	margin: 0 auto;
+	margin-top: 7em;
+	margin-bottom: 2em;
+	font-size: 1em;
+}
+
+#nousContacter {
+	margin-bottom: 3em;
+	height: 28.2em;
+}
+
+#formContact {
+	float: left;
+	width:20em;
+	margin-right: 5.4em;
+	color: @bleu;
+	background-image: url('../img/icons/form.png');
+	background-repeat: no-repeat;
+	background-size: 20px auto;
+	background-position: 18px 19px;
+
+	input,textarea {
+		background-color: @bleu;
+		color: white;
+		border: none;
+		padding-left: 0.3em;
+		display:block;
+		margin: 0.3em 0 1.1em 0;
+	}
+
+	textarea {
+		width: 23em;
+		height: 12em;
+	}
+
+	input {
+		width: 16em;
+		height: 1.8em;
+	}
+
+	#envoyer {
+		font-family: 'OswaldBold';
+		font-size: 0.9em;
+		text-transform: uppercase;
+		width: 5em;
+		height: 1.8em;
+		cursor: pointer;
+		border-radius: 4px;
+
+		&:hover{
+			color: @bleu;
+			background-color: white;
+		}
+	}
+}
+
+#coordonnees {
+	float: left;
+	width: 17em;
+	margin-top: 1em;
+
+	>div {
+		margin-bottom:1.4em;
+	}
+
+	span {
+		color: @bleu;
+		font-size: 0.9em;
+	}
+}
+
+#courrier {
+	background-image: url('../img/icons/courrier.png');
+	background-repeat: no-repeat;
+	background-size: 20px auto;
+	background-position: 0px 5px;
+
+	ul {
+		color: @bleu;
+
+		li:nth-of-type(4),li:nth-of-type(5){
+			display: inline-block;
+		}
+	}
+}
+
+
+#email {
+	background-image: url('../img/icons/email.png');
+	background-repeat: no-repeat;
+	background-size: 20px auto;
+	background-position: 0px 2px;
+
+	p {
+		margin-top: 0.5em;
+	}
+}
+
+#telephone {
+	background-image: url('../img/icons/telephone.png');
+	background-repeat: no-repeat;
+	background-size: 20px auto;
+	background-position: 0px 6px;
+}
+
+#rendreVisite {
+	height: 31em;
+	margin-bottom:3em;
+}
+
+#acces {
+	height:6em;
+
+	p{
+		float: left;
+		width: 14.4em;
+		margin-right: 1.4em;
+	
+		&:last-child{
+			margin-right: 0em;
+		}
+	}
+}
+
+#acces ul{
+	float: left;
+	width: 14.4em;
+	margin-right: 1.4em;
+	color: @bleu;
+
+	li:nth-of-type(3),li:nth-of-type(4){
+		display: inline-block;
+	}
+}
+
+#map {
+	border: 15px solid #099;
+	border-radius: 12px;
+}
+
+#effectif {
+	margin-right:1.4em;
+}
+
+#effectif, #sympathisant {
+	float:left;
+	width:22.3em;
+
+	h2{
+		text-align: center;
+		padding-left: 0;
+	}
+}
+
+.prix {
+	color: @bleu;
+	font-family: @oswald;
+	text-align: center;
+	display: block;
+	margin-bottom:1em;
+}
+
+.cotisation {
+	color: @bleu;
+	font-family: @oswaldR;
+	text-align: center;
+	display: block;
+	margin-bottom:0.5em;
+}
+
+#inscription>div:last-child {
+	clear: both;
+	text-align: center;
+}
+
+.telecharger {
+	color: @bleu;
+	font-family: @oswald;
+	text-align: center;
+	display: block;
+	margin: 0.5em 0 1em 0;
+	text-transform: uppercase;
+}
+
+.compte {
+	color: @bleu;
+	text-align: center;
+	margin-top: 1em;
+	font-size: 0.9em;
+}

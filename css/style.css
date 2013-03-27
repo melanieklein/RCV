@@ -1,201 +1,434 @@
-@import url(reset.css);
-
-@font-face {
-    font-family: 'OswaldBold';
-    src: url('../fonts/Oswald-Bold-webfont.eot');
-    src: url('../fonts/Oswald-Bold-webfont.eot?#iefix') format('embedded-opentype'),
-         url('../fonts/Oswald-Bold-webfont.woff') format('woff'),
-         url('../fonts/Oswald-Bold-webfont.ttf') format('truetype'),
-         url('../fonts/Oswald-Bold-webfont.svg#OswaldBold') format('svg');
-    font-weight: normal;
-    font-style: normal;
-
+/**
+ * Eric Meyer's Reset CSS v2.0 (http://meyerweb.com/eric/tools/css/reset/)
+ * http://cssreset.com
+ */
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
 }
-
-@font-face {
-    font-family: 'FolksRegular';
-    src: url('../fonts/Folks-Normal-webfont.eot');
-    src: url('../fonts/Folks-Normal-webfont.eot?#iefix') format('embedded-opentype'),
-         url('../fonts/Folks-Normal-webfont.woff') format('woff'),
-         url('../fonts/Folks-Normal-webfont.ttf') format('truetype'),
-         url('../fonts/Folks-Normal-webfont.svg#FolksRegular') format('svg');
-    font-weight: normal;
-    font-style: normal;
-
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
 }
-
-@font-face {
-    font-family: 'FolksLightRegular';
-    src: url('../fonts/Folks-Light-webfont.eot');
-    src: url('../fonts/Folks-Light-webfont.eot?#iefix') format('embedded-opentype'),
-         url('../fonts/Folks-Light-webfont.woff') format('woff'),
-         url('../fonts/Folks-Light-webfont.ttf') format('truetype'),
-         url('../fonts/Folks-Light-webfont.svg#FolksLightRegular') format('svg');
-    font-weight: normal;
-    font-style: normal;
-
-}
-
 body {
-	font-size:18px;
-	font-family: "FolksRegular";
-	background-image:url('../img/motifBody.png');
-	background-repeat: repeat;
-	color: #666666;
+  line-height: 1;
 }
-
-.titleSec {
-	display:none;
+ol,
+ul {
+  list-style: none;
 }
-
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+/*---FIN RESET---*/
+@font-face {
+  font-family: 'FolksRegular';
+  src: url('../fonts/Folks-Normal-webfont.eot');
+  src: url('../fonts/Folks-Normal-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/Folks-Normal-webfont.woff') format('woff'), url('../fonts/Folks-Normal-webfont.ttf') format('truetype'), url('../fonts/Folks-Normal-webfont.svg#FolksRegular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'FolksLightRegular';
+  src: url('../fonts/Folks-Light-webfont.eot');
+  src: url('../fonts/Folks-Light-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/Folks-Light-webfont.woff') format('woff'), url('../fonts/Folks-Light-webfont.ttf') format('truetype'), url('../fonts/Folks-Light-webfont.svg#FolksLightRegular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+/*----STYLE GENERAL----*/
+body {
+  font-size: 17px;
+  font-family: 'FolksRegular';
+  background: url('../img/motifBody.png') repeat;
+  color: #666666;
+  line-height: 1.2em;
+}
+.outliner {
+  display: none;
+}
 a {
-	color:#009999;
-	text-decoration:none;
+  color: #009999;
+  text-decoration: none;
 }
-
 a:hover {
-	color:#005656;
+  color: #005656;
 }
-
-
+.block {
+  width: 46em;
+  margin: 0 auto;
+  margin-top: 4em;
+  position: relative;
+  padding-top: 4em;
+}
+h1 {
+  width: 40.7em;
+  position: absolute;
+  height: 64px;
+  background: url('../img/ruban.png') no-repeat;
+  font-family: 'Oswald';
+  text-transform: uppercase;
+  font-size: 1.3em;
+  color: #FFFFFF;
+  text-shadow: 1px 1px 0px #222;
+  top: -1em;
+  left: -4.36em;
+  padding: 0.8em 0em 0em 3.3em;
+}
+.node {
+  background-color: #dfe6e4;
+  border: 2px solid #009999;
+  padding: 1em;
+  margin-bottom: 0.8em;
+}
+h2 {
+  font-family: 'Oswald';
+  color: #666666;
+  font-size: 1.2em;
+  text-transform: uppercase;
+  margin-bottom: 0.7em;
+  padding-left: 1em;
+}
+.page {
+  background-color: #f2f8f8;
+  width: 55em;
+  margin: 0 auto;
+  display: table;
+}
 header {
-	height:10em;
-	background-image:url('../img/motifHeader.png');
-	background-repeat: repeat;
+  height: 10em;
+  background-image: url('../img/motifH.png');
+  background-repeat: repeat;
 }
-
-#menu {
-	background-color: #009999;
-	padding: 1em 0em 1em 0em;
-	position:relative;
-	top:7em;
+.menu-nav {
+  background-color: #005656;
+  padding: 1em 0em 2em 0em;
+  position: relative;
+  top: 7em;
+  width: 55em;
+  margin: 0 auto;
+  box-shadow: 0px 2px 3px #666666;
 }
-
-#menu li {
-	display:inline-block;
-	width:6em;
-	text-align: center;
-	/*margin-right:1.9em;
-	margin-left:1.9em;*/
+#menu1 li,
+#menu2 li {
+  display: inline-block;
+  margin: 0 1.1em 0 1.1em;
+  position: relative;
 }
-
-#menu li:first-of-type
-{
-	margin-left:0em;
+#menu1 li:first-child,
+#menu2 li:first-child {
+  margin-left: 0;
 }
-
-#menu li:last-of-type{
-	margin-right:0em;
+#menu1 li:last-child,
+#menu2 li:last-child {
+  margin-right: 0em;
 }
-
-#menu li:nth-of-type(5){
-	margin-left: 17em;
+#menu1 li:hover div,
+#menu2 li:hover div {
+  visibility: visible;
 }
-
-#menu a{
-	color:#FFFFFF;
+#menu1 div,
+#menu2 div {
+  visibility: hidden;
 }
-
-#menu a:hover{
-	color:#005656;
+#menu1 {
+  float: left;
+  margin-left: 4.6em;
 }
-
-#page {
-	background-color: rgba(242,248,247,.95);
-	width:55em;
-	margin:0 auto;
-	display:table;
+#menu2 {
+  float: right;
+  margin-right: 4.6em;
 }
-
+.menu-nav a {
+  color: #FFFFFF;
+}
+.menu-nav a:hover {
+  background-color: #005656;
+}
+.second-menu {
+  position: absolute;
+  background-color: #005656;
+  font-size: 0.9em;
+  width: 8em;
+  right: -3em;
+  top: 2.2em;
+  padding: 0.5em;
+}
+.second-menu ul {
+  margin-top: 0.8em;
+}
+.second-menu li {
+  margin: 0 !important;
+}
+.second-menu li a:hover {
+  padding: 0 !important;
+}
 #logo {
-	position:absolute;
-	top:-4em;
-	right:27em;
-
+  position: absolute;
+  top: -5em;
+  right: 21.6em;
+  z-index: 10;
 }
-
-#videoIntro {
-	background-color:black;
-	height:396px;
-	width:652px;
-	margin: 0 auto;
-	margin-top: 2em;
-	margin-bottom: 2em;
+#logo:hover {
+  background-color: transparent;
 }
-
-#intro>h2 {
-	font-family: 'OswaldBold';
-	color: #009999;
-	font-size: 1.4em;
-	text-align: center;
+.intro-text {
+  margin-top: 2em;
+  padding: 0 1.5em;
+  display: table;
 }
-
-#listeIntro {
-	width: 43em;
-	margin: 0 auto;
-	margin-top: 3em;
+.intro-text ul {
+  display: block;
+  float: left;
 }
-
-#listeIntro ul {
-	display: block;
-	float: left;
+.intro-text li {
+  list-style-image: url('../sprite/check.png');
+  margin-bottom: 1em;
+  line-height: 1.3em;
 }
-
-#listeIntro li {
-	list-style-image: url('../sprite/check.png');
-	margin-bottom:1em;
-	line-height: 1.3em;
+.intro-text > ul {
+  width: 22.3em;
 }
-
-#listeIntro1 {
-	width: 22.3em;
+.intro-text > ul + ul {
+  width: 20em;
+  position: relative;
+  left: 1.4em;
 }
-
-#listeIntro2 {
-	width:20em;
-	position:relative;
-	left:1.4em;
+.inscription-invite {
+  background-image: url('../sprite/camera.png');
+  background-repeat: no-repeat;
+  background-size: 50px auto;
+  padding-left: 3em;
+  padding-top: 1em;
+  font-size: 1.3em;
+  margin-top: 1em;
 }
-
-
-#appelInscription {
-	clear: both;
-	width:21em;
-	position:relative;
-	top:-6em;
-	right:-28.3em;
+.inscription-invite p {
+  font-family: 'Oswald';
+  margin-bottom: 0.2em;
 }
-
-#appelInscription h2 {
-	font-family: 'OswaldBold';
+.col3 {
+  width: 8.5em;
 }
-
-#appelInscription h3 {
-	text-align: right;
+.col4 {
+  width: 12.3em;
 }
-
-#imgCam {
-	float:left;
-	width:20%;
+.col8 {
+  width: 28em;
 }
-
-#appelInscription hgroup {
-	float:left;
-	width: 80%;
-	margin-top:0.5em;
+.col6 {
+  width: 20.2em;
 }
-
-#aLaUne {
-	clear:both;
-	width:46em;
-	margin:0 auto;
+.colb6 {
+  width: 22.4em;
 }
-
-#aLaUneh1 {
-	font-family: 'OswaldBold';
-	font-size: 1.8em;
-	font-variant: small-caps;
-	color: #FFFFFF;
-	background-color: #009999;
-	padding: 0.1em 0em 0.2em 0em;
+.colb4 {
+  width: 14.5em;
 }
+/*----------------ACCUEIL--------------*/
+.news-contest,
+.news-forum,
+.news-calendar,
+.news-photos,
+.news-videos {
+  float: left;
+}
+.news-contest {
+  margin-right: 1.1em;
+}
+.news-photos {
+  clear: both;
+}
+/*----------------LECLUB--------------*/
+.activities {
+  margin-top: 7em;
+}
+.activities-intro p,
+.activities-intro div {
+  float: left;
+}
+.activities-intro p {
+  margin-right: 1.2em;
+}
+.comite {
+  clear: both;
+}
+.comite-members li {
+  float: left;
+  margin: 0em 0.49em 2em 0.49em;
+}
+.comite-members li:first-child {
+  margin-left: 0;
+}
+.comite-members li:nth-of-type(5) {
+  margin-left: 0;
+}
+.comite-members li:nth-of-type(4) {
+  margin-right: 0;
+}
+.comite-members li:nth-of-type(8) {
+  margin-right: 0;
+}
+.comite-members li:nth-of-type(9) {
+  margin-left: 0;
+}
+.comite-members li:last-child {
+  margin-right: 0;
+}
+.comite-members h4 {
+  text-align: center;
+}
+.links {
+  clear: both;
+}
+/*----------------REALISATIONS--------------*/
+/*----------------CALENDRIER--------------*/
+/*----------------ARCHIVES--------------*/
+.concours-interclubs,
+.concours-provincial,
+.concours-national,
+.concours-etrangers {
+  float: left;
+}
+.concours-interclubs,
+.concours-provincial {
+  margin-right: 1.1em;
+}
+.photos {
+  clear: both;
+}
+/*----------------CONTACT--------------*/
+.contact-form,
+.contact-particulars {
+  float: left;
+}
+.contact-form {
+  margin-right: 1.2em;
+}
+.visit {
+  clear: both;
+}
+.visit-acces p,
+.visit-acces ul {
+  float: left;
+}
+.visit-acces p:first-child,
+.visit-acces ul {
+  margin-right: 1.2em;
+}
+.inscription-member1,
+.inscription-member2 {
+  float: left;
+}
+.inscription-member1 {
+  margin-right: 1.2em;
+}
+.inscription-note {
+  clear: both;
+}
+/*----------------FORUM--------------*/

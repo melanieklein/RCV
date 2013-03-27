@@ -1,123 +1,150 @@
 <!DOCTYPE HTML>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=<?php bloginfo('language');?>> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=<?php bloginfo('language');?>> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang=<?php bloginfo('language');?>> <![endif]-->
+<!--[if lt IE 9]>
+<script src="dist/html5shiv.js"></script>
+<![endif]-->
 <html lang="en-US">
 <head>
 	<meta charset="UTF-8">
 	<title>Royal Ciné-Vidéo 8-16 - Accueil</title>
 	<link rel="stylesheet" href="css/style.css">
+	<link href='http://fonts.googleapis.com/css?family=Oswald:400,300,700' rel='stylesheet' type='text/css'>
 	<link rel="icon" type="image/png" href="img/icons/icon2.png">
 	<script src="js/script.js"></script>
 </head>
-<body id="accueil">
-
-	<section id="page">
-		<h1 class="titleSec">Contenu de la page</h1>
+<body >
+<h1 class="outliner">Site du Royal Ciné-Vidéo 8/16</h1>
+	<div class="page">
 		<header>
-			
-			<nav id="menu">
-				<h1 class="titleSec">Menu de navigation</h1>
-				<li><a href="#">Accueil</a></li>
-				<li><a href="#">Le club</a></li>
-				<li><a href="#">Archives</a></li>
-				<li id="logo">
-						<a href="index.html">
-							<img src="img/icons/icon2.png" alt="Logo du site du Royal Ciné-Vidéo 8/16" title="Aller vers l'accueil">
-						</a>
-				</li>
-				<li><a href="#">Réalisations</a></li>
-				<li><a href="#">Contact</a></li>
-				<li><a href="#">Liens</a></li>
+		
+			<nav class="menu-nav">
+				<h1 class="outliner">Menu de navigation</h1>
+				<ul id="menu1">
+					<li><a href="index.html">Accueil</a>
+					</li>
+					<li><a href="club.html">Le club</a>
+						<div class="second-menu">
+							<ul>
+								<li><a href="#">Présentation</a></li>
+								<li><a href="#">Le comité organisateur</a></li>
+								<li><a href="#">Liens</a></li>
+							</ul>
+						</div>
+					</li>
+					<li><a href="#">Réalisations</a></li>
+				</ul>
+				<a id="logo" href="index.html">
+					<img src="img/icons/logo.png" alt="Logo du site du Royal Ciné-Vidéo 8/16" title="Aller vers l'accueil">
+				</a>	
+				<ul id="menu2">
+					<li><a href="#">Calendrier</a></li>
+					<li><a href="#">Archives</a>
+					<div class="second-menu">
+							<ul>
+								<li><a href="#">Résultats des concours</a></li>
+								<li><a href="#">Photos</a></li>
+								<li><a href="#">Histoire du club</a></li>
+							</ul>
+						</div></li>
+					<li><a href="contact.html">Contact</a>
+					<div class="second-menu">
+							<ul>
+								<li><a href="#">Conctatez-nous&nbsp;!</a></li>
+								<li><a href="#">Nous rendre visite</a></li>
+								<li><a href="#">S'inscrire au club</a></li>
+							</ul>
+						</div></li>
+				</ul>
 			</nav>
-
 		</header>
-		<section id="corps">
-		<h1 class="titleSec">Corps de la page</h1>
-		<section id="intro">
-			<section id="videoIntro">				
-			</section>
-			<h2>Filmer, c'est bien... Réaliser un montage, c'est mieux !</h2>
-			<section id="listeIntro">
-				<ul id="listeIntro1">
+
+		<div class="content">
+
+		<div class="block intro-site">
+			<div class="presentation-video">				
+			</div>
+			<p class"slogan">Filmer, c'est bien... Réaliser un montage, c'est mieux !</p>
+			<div class="intro-text">
+				<ul>
 					<li>Vous filmez,</li>
 					<li>Vous avez les connaissances de base en informatique,</li>
 					<li>Vous aimeriez filmer mais vous ne savez quel matériel acquérir</li>
 					<li>Vous réalisez des films de vacances, des documentaires ou des reportages</li>
-					<li>Vous ameriez apprendre la technique du montage, de la sonorisation</li>
 				</ul>
-				<ul id="listeIntro2">
+				<ul>
+					<li>Vous ameriez apprendre la technique du montage, de la sonorisation</li>
 					<li>Vous montez et sonorisez vos films mais vous aimeriez améliorer votre savoir-faire</li>
 					<li>Vous maitrisez la réalisation de films mais vous aimeriez élargir votre public et participer à des concours</li>
 				</ul>
-			</section>
+			</div>
 			
-			<section id="appelInscription">
-				<section id="imgCam">
-					<img src="sprite/camera.png" alt="Icone de caméra" width="75px">
-				</section>
-				<hgroup>
-					<h2>Le Royal Ciné-Vidéo 8/16 est fait pour vous&nbsp;!</h2>
-					<h3><a href="contact.html" title="Aller vers la section inscription">Venez vous inscrire</a></h3>
-				</hgroup>
-			</section>
-		</section>
-		<h1 id="aLaUneh1">à la une</h1>
-		<section id="aLaUne">
-			
-			<section id="concours">
+			<div class="inscription-invite">
+					<p>Le Royal Ciné-Vidéo 8/16 est fait pour vous&nbsp;!</p>
+					<a href="contact.html" title="Aller vers la section inscription">Venez vous inscrire</a>
+			</div>
+		</div>
+
+		<section class="block news">
+			<h1>à la une</h1>
+			<section class="node news-contest col4">
 				<h2>concours</h2>
-				<section id="concoursContenu">
-					<section id="aLaUneVideo">
-						
-					</section>
-					<ul id="concoursInfos">
+				<div>
+					<div class="video-contest">
+						<img src="img/video.png" alt="">
+					</div>
+					<ul>
 						<li>
-							<h2>Film&nbsp;</h2>
-							<h3>"Carte postale de Vienne"</h3>
+							<h3>Film&nbsp;:
+							<a href="#">&laquo;&nbsp;Carte postale de Vienne&nbsp;&raquo;</a></h3>
 						</li>
 						<li>
-							<h2>Auteur&nbsp;</h2>
-							<h3>Jean-François Vandenbempt</h3>
+							<h3>Auteur&nbsp;:
+							<a href="#">Jean-François Vandenbempt</a></h3>
 						</li>
 						<li>
-							<h2>Concours&nbsp;</h2>
-							<h3>"Interludes du Camérans 2012</h3>
+							<h3>Concours&nbsp;:
+							<a href="#">&laquo;&nbsp;Interludes du Camérans 2012&nbsp;&raquo;</a></h3>
 						</li>
 					</ul>
-					<a href="archives.html" title="Aller vers la page concours">> Voir tous les concours</a>
-				</section>
+					<a href="archives.html" title="Aller vers la page concours" class="contest-acces"> Voir tous les concours</a>
+				</div>
 			</section>
-			<section id="forum">
+
+			<section class="node news-forum col8">
 				<h2>forum</h2>
-				<section id="forumContenu">
+				<div>
 					<ul>
-						<li><a href="#">Nouveau tobic "Les effets spéciaux" par Henri Lemin</a></li>
-						<li><a href="#">Réponse de Bernard Dupont dans le topic "La 3D"</a></li>
+						<li><a href="#">Nouveau topic &laquo;&nbsp;Les effets spéciaux&nbsp;&raquo; par Henri Lemin</a></li>
+						<li><a href="#">Réponse de Bernard Dupont dans le topic &laquo;&nbsp;La 3D&nbsp;&raquo;</a></li>
 						<li><a href="#">Inscription de Pierre Dumoulin</a></li>
 					</ul>
-				</section>
+					<a href="#" class="forum-acces">Accéder au forum ></a>
+				</div>
 			</section>
-			<section id="calendrier">
+
+			<section class="node news-calendar col8">
 				<h2>calendrier</h2>
-				<section id="calendrierContenu">
+				<div>
 					<ul>
 						<li>
-							<h2>9 Nov.</h2>
-							<h3>Présentation des rushes de la sortie et projection et analyse de films</h3>
+							<span class="news-calendar-date">09 Nov. </span><a href="#" class="news-calendar-name">Présentation des rushes de la sortie et projection et analyse de films</a>
 						</li>
 						<li>
-							<h2>17 Nov.</h2>
-							<h3>Formation</h3>
+							<span class="news-calendar-date">17 Nov.</span><a href="#" class="news-calendar-name">Formation</a>
 						</li>
 						<li>
-							<h2>22 Nov.</h2>
-							<h3>Information, projection et analyse de films</h3>
+							<span class="news-calendar-date">22 Nov.</span><a href="#" class="news-calendar-name">Information, projection et analyse de films</a>
 						</li>
 					</ul>
-					<a href="leclub.html">> Accéder au calendrier</a>
-				</section>
+					<a href="calendrier.html" class="calendar-acces">Accéder au calendrier ></a>
+				</div>
 			</section>
-			<section id="photos">
+
+			<section class="news-photos colb6">
 				<h2>photos</h2>
-				<ul id="listePhotos">
+				<ul>
 					<li><a href=""><img src="" alt=""></a></li>
 					<li><a href=""><img src="" alt=""></a></li>
 					<li><a href=""><img src="" alt=""></a></li>
@@ -125,18 +152,24 @@
 					<li><a href=""><img src="" alt=""></a></li>
 					<li><a href=""><img src="" alt=""></a></li>
 				</ul>
+				<a href="#" class="photos-acces"></a>
 			</section>
-			<section id="videos">
+			<section class="news-videos colb6">
 				<h2>vidéos</h2>
-				<ul id="listeVideos">
+				<ul>
 					<li><a href=""><img src="" alt=""></a></li>
 					<li><a href=""><img src="" alt=""></a></li>
 					<li><a href=""><img src="" alt=""></a></li>
 					<li><a href=""><img src="" alt=""></a></li>
 				</ul>
+				<a href="#" class="videos-acces"></a>
 			</section>
-		</section>
-		<footer></footer>
-	</section>
+
+	</div>
+		<footer>
+			
+
+		</footer>
+	</div>
 </body>
 </html>
