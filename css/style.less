@@ -76,17 +76,17 @@ table {
 
 @grisFonce: #666666;
 @grisClair: #dfe6e4;
-@bleu: #009999;
+@bleu: #33979F;
 @bleuFonce: #005656;
 
 /*----STYLE GENERAL----*/
 
 body {
-	font-size:17px;
+	font-size:15px;
 	font-family: @folksR;
 	background:url('../img/motifBody.png') repeat;
 	color: @grisFonce;
-	line-height: 1.2em;
+	line-height: 1.3em;
 }
 
 .outliner {
@@ -98,11 +98,12 @@ a {
 	text-decoration:none;
 	&:hover {
 		color:@bleuFonce;
+		text-decoration: underline;
 	}
 }
 
 .block {
-	width: 46em;
+	width: 62em;
 	margin: 0 auto;
 	margin-top: 4em;
 	position: relative;
@@ -110,17 +111,18 @@ a {
 }
 
 h1 {
-	width:40.7em;
+	width:50.7em;
 	position: absolute;
-	height: 64px;
+	height: 70px;
 	background: url('../img/ruban.png') no-repeat;
+	background-size: 1054px;
 	font-family: @oswald;
 	text-transform: uppercase;
 	font-size: 1.3em;
 	color: #FFFFFF;
-	text-shadow: 1px 1px 0px #222;
+	text-shadow: -1px -1px 0px @grisFonce;
 	top: -1em;
-	left: -4.36em;
+	left: -3.15em;
 	padding: 0.8em 0em 0em 3.3em;
 }
 
@@ -138,14 +140,18 @@ h2 {
 	font-size: 1.2em;
 	text-transform: uppercase;
 	margin-bottom: 0.7em;
+}
+
+.with-icon {
 	padding-left: 1em;
 }
 
 .page {
 	background-color: #f2f8f8;
-	width:55em;
+	width:67.5em;
 	margin:0 auto;
 	display:table;
+	box-shadow: 0px 2px 8px @grisFonce;
 }
 
 
@@ -153,6 +159,7 @@ header {
 	height:10em;
 	background-image:url('../img/motifH.png');
 	background-repeat: repeat;
+	margin-bottom: 6em;
 }
 
 .menu-nav {
@@ -160,17 +167,25 @@ header {
 	padding: 1em 0em 2em 0em;
 	position:relative;
 	top:7em;
-	width: 55em;
 	margin: 0 auto;
-	box-shadow: 0px 2px 3px @grisFonce;
+	box-shadow: 0px 1px 2px @grisFonce;
+
+	a {
+		color: #ffffff
+	}	
+	
+	a:hover{
+		color: @bleu;
+		text-decoration: none;
+		
+	}
 }
 
 #menu1,#menu2 {
 
 	li {
 		display:inline-block;
-		//width:6em;
-		margin: 0 1.1em 0 1.1em;
+		margin: 0 2.3em 0 2.3em;
 		position:relative;
 
 		&:first-child {
@@ -193,30 +208,23 @@ header {
 
 #menu1 {
 	float: left;
-margin-left: 4.6em;
+	margin-left: 2.8em;
 }
 
 #menu2 {
 	float: right;
-	margin-right: 4.6em;
-}
-
-
-.menu-nav a{
-	color:#FFFFFF;
-	&:hover {
-	background-color: @bleuFonce;
-	}
+	margin-right: 2.8em;
 }
 
 .second-menu {
 	position: absolute;
 	background-color: @bleuFonce;
 	font-size: 0.9em;
-	width: 8em;
-	right: -3em;
-	top:2.2em;
+	width: 10em;
+	right: -6em;
+	top:1.2em;
 	padding:0.5em;
+	line-height: 1.8em;
 	ul {
 		margin-top:0.8em;
 	}
@@ -234,7 +242,7 @@ margin-left: 4.6em;
 #logo {
 	position: absolute;
 	top: -5em;
-	right: 21.6em;
+	right: 27.7em;
 	z-index: 10;
 	&:hover{
 		background-color: transparent;
@@ -258,11 +266,11 @@ margin-left: 4.6em;
 	}
 
 	>ul {
-		width: 22.3em;
+		width: 30em;
 	}
 
 	>ul+ul {
-		width:20em;
+		width:28.5em;
 		position:relative;
 		left:1.4em;
 	}
@@ -288,26 +296,33 @@ margin-left: 4.6em;
 }
 
 .col4{
-	width: 12.3em;
+	width: 17.63em;
 }
 
 .col8 {
-	width: 28em;
+	width: 38.4em;
 }
 
 .col6{
-	width:20.2em;
+	width:28.1em;
 }
 
 .colb6 {
-	width: 22.4em;
+	width: 30.3em;
 }
 
 .colb4 {
-	width:14.5em;
+	width:19.8em;
 }
 
+
+
 /*----------------ACCUEIL--------------*/
+
+.presentation-video {
+	margin: 0 auto;
+	width: 854px;
+}
 
 .news-contest, .news-forum, .news-calendar, .news-photos, .news-videos {
 	float: left;
@@ -319,6 +334,26 @@ margin-left: 4.6em;
 
 .news-photos {
 	clear: both;
+	margin-right: 1.3em;
+}
+
+.acces {
+	float: right;
+}
+
+.news-videos {
+	li {
+		margin-bottom: 1em;
+	}
+}
+
+.news-videos-infos {
+	float: right;
+	width: 15em;
+
+	p {
+		margin-top: 1em;
+	}
 }
 
 /*----------------LECLUB--------------*/
@@ -332,8 +367,38 @@ margin-left: 4.6em;
 		float:left;
 	}
 	p{
-		margin-right: 1.2em;
+		position: absolute;
+		background-color: rgba(51,151,158,.6);
+		padding: 2em 1em 2em 1em;
+		text-align: center;
+		color: white;
+		top: 24em;
 	}
+}
+
+.activities-details {
+
+	clear:both;
+	padding-top: 2em;
+
+	>ul {
+		text-align: center;
+		margin-bottom: 2em;
+	}
+
+	div {
+		float: left;
+
+		h4{
+			text-align:center;
+		}
+	}
+}
+
+em {
+	color: @bleu;
+	text-transform: uppercase;
+	font-family: @oswald;
 }
 
 .comite {
@@ -372,7 +437,16 @@ margin-left: 4.6em;
 
 .links {
 	clear: both;
+
+	div {
+		float:left;
+		&:first-child{
+			margin-right: 1.2em;
+		}
+	}
 }
+
+
 
 /*----------------REALISATIONS--------------*/
 
@@ -384,21 +458,101 @@ margin-left: 4.6em;
 }
 
 .concours-interclubs, .concours-provincial {
-	margin-right: 1.1em;
+	margin-right: 1em;
 }
 
 .photos {
 	clear: both;
 }
 
+
+
 /*----------------CONTACT--------------*/
+
+.contact-text {
+	margin: 0 auto;
+	text-align: center;
+}
 
 .contact-form,.contact-particulars {
 	float:left;
 }
 
 .contact-form {
-	margin-right: 1.2em;
+	margin-right: 1em;
+	margin-bottom: 4em;
+	label {
+		display: block;
+		margin-bottom: 0.2em;
+	}
+	input {
+		font-family: @folksR;
+		width: 17em;
+		height: 2.2em;
+		margin-bottom: 1em;
+		background-color: @bleu;
+		border: none;
+		color: #ffffff;
+		padding-left: 0.5em;
+		font-size: 1em;
+		border: 1px #eee solid;
+		-webkit-box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.25);
+		-moz-box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.25);
+		-ms-box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.25);
+		box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.25)
+	}
+
+	::-webkit-input-placeholder { /* WebKit browsers */
+    color:    #f2f8f8;
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    color:    #f2f8f8;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+    color:    #f2f8f8;
+}
+:-ms-input-placeholder { /* Internet Explorer 10+ */
+    color:    #f2f8f8;
+}
+
+	textarea {
+		font-family: @folksR;
+		background-color: @bleu;
+		color: #ffffff;
+		font-size: 1em;
+		border: none;
+		padding: 0.5em;
+		width: 26.7em;
+		height: 10em;
+		margin-bottom: 1em;
+				border: 1px #eee solid;
+		-webkit-box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.25);
+		-moz-box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.25);
+		-ms-box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.25);
+		box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.25)
+	}
+}
+
+#envoyer {
+	font-family: @oswald;
+	text-transform: uppercase;
+	font-size: 1.2em;
+	width: 4.4em;
+	padding: 0;
+	height: 1.8em;
+	border-radius: 6px;
+	cursor: pointer;
+	box-shadow: none;
+	border: none;
+
+	&:hover {
+		color:@bleu;
+		background-color: #f2f8f8;
+	}
+}
+
+.contact-particulars>div {
+	margin-bottom: 4em;
 }
 
 .visit {
@@ -411,7 +565,7 @@ margin-left: 4.6em;
 	}
 
 	p:first-child,ul {
-		margin-right: 1.2em;
+		margin-right: 1.3em;
 	}
 }
 
@@ -420,7 +574,7 @@ margin-left: 4.6em;
 }
 
 .inscription-member1 {
-	margin-right: 1.2em;
+	margin-right: 1em;
 }
 
 .inscription-note {

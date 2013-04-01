@@ -36,7 +36,7 @@
 					<li><a href="#">Réalisations</a></li>
 				</ul>
 				<a id="logo" href="index.html">
-					<img src="img/icons/logo.png" alt="Logo du site du Royal Ciné-Vidéo 8/16" title="Aller vers l'accueil">
+					<img src="img/icons/logo.png" width="200" height="200" alt="Logo du site du Royal Ciné-Vidéo 8/16" title="Aller vers l'accueil">
 				</a>	
 				<ul id="menu2">
 					<li><a href="#">Calendrier</a></li>
@@ -61,28 +61,30 @@
 		</header>
 		<div class="content">
 
-			<p class="intro-text">Une question, un conseil, un message&nbsp;? n'hésitez pas à nous <a href="#ancre1">contacter&nbsp;!</a> Vous voulez voir comment on travaille&nbsp;? <a href="#ancre2">Venez visiter nos locaux&nbsp;!</a> Vous voulez vous inscrire&nbsp;? <a href="#ancre3">Consultez toutes les infos d'inscription&nbsp;!</a></p>
+			<p class="contact-text colb6">Une question, un conseil, un message&nbsp;? n'hésitez pas à nous <a href="#ancre-contact">contacter&nbsp;!</a> Vous voulez voir comment on travaille&nbsp;? <a href="#ancre-visit">Venez visiter nos locaux&nbsp;!</a> Vous voulez vous inscrire&nbsp;? <a href="#ancre-inscription">Consultez toutes les infos d'inscription&nbsp;!</a></p>
 			
 			
-			<div class="block contact">
+			<div class="block contact" id="ancre-contact">
 				<h1>nous contacter</h1>
 
 				<div class="node contact-form col6">
-					<h2>contact direct</h2>
+					<h2 class="with-icon">contact direct</h2>
 					<form method="post" action="#">        
-	                        <label for="nom">Votre nom&nbsp;:</label>
-	                        <input name="nom" id="nom" type="text" placeholder="Prénom Nom" autofocus="autofocus" required />
-	                        <label for="mail">Votre adresse email&nbsp;:</label>
+	                        <label for="prenom">Prénom</label>
+	                        <input name="prenom" id="prenom" type="text" placeholder="Prénom" autofocus="autofocus" required />
+	                        <label for="nom">Nom</label>
+	                        <input name="nom" id="nom" type="text" placeholder="Nom" autofocus="autofocus" required />
+	                        <label for="mail">Email</label>
 	                        <input name="email" id="mail" type="email" placeholder="exemple@hotmail.com" required>        
-	                        <label for="message">Votre question / message&nbsp;:</label>
+	                        <label for="message">Question / message</label>
 	                        <textarea name="message" id="message"  placeholder="Mon message..." required></textarea>
 	                        <input type="submit" title="envoi du message" name="envoyer" id="envoyer" value="envoyer" />
 	                </form>
 				</div>
 
-				<div class="contact-particulars col6">
+				<div class="contact-particulars colb6">
 					<div class="contact-post">
-						<h2>courrier</h2>
+						<h2 class="with-icon">courrier</h2>
 						<ul>
 							<li>Michel Charlier</li>
 							<li>Président du Royal Ciné-Vidéo 8/16</li>
@@ -92,12 +94,12 @@
 						</ul>
 					</div>
 					<div class="contact-email">
-						<h2>email</h2>						
+						<h2 class="with-icon">email</h2>						
 							<a href="mailto:info@cinevideo816.be">info@cinevideo816.be</a>
 							<p>Ou directement un membre du Comité, dont vous trouverez ses coordonnées dans la section <a href="comite.html">le comité organisateur</a>.</p>						
 					</div>
 					<div class="contact-phone">
-						<h2>téléphone</h2>
+						<h2 class="with-icon">téléphone</h2>
 						<ul>
 							<li>Faxe&nbsp;: <span>04 370 18 01</span></li>
 							<li>GSM&nbsp;: <span>04 91 48 59 83</span></li>
@@ -107,7 +109,7 @@
 
 			</div>	
 
-			<div class="block visit">
+			<div class="block visit" id="ancre-visit">
 				<h1>nous rendre visite</h1>
 				<div class="visit-acces">
 					<p class="colb4">Nos locaux et notre siège social sont situés dans les bâtiments de l'U3A (Université du 3ème Âge)</p>
@@ -124,7 +126,7 @@
 				</div>
 			</div>	
 
-			<div class="block inscription">
+			<div class="block inscription" id="ancre-inscription">
 				<h1>s'inscrire au club</h1>
 				<div class="inscription-member1 col6">
 					<h2>membre effectif</h2>
