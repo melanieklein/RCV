@@ -196,7 +196,7 @@ h2 {
   margin-bottom: 0.7em;
 }
 .with-icon {
-  padding-left: 1em;
+  padding-left: 1.4em;
 }
 .page {
   background-color: #f2f8f8;
@@ -352,15 +352,89 @@ header {
 .news-contest {
   margin-right: 1.1em;
 }
+.news-contest h2 {
+  position: relative;
+}
+.news-contest h2:before {
+  content: "";
+  background-image: url("../img/icons/concours.png");
+  width: 80px;
+  height: 80px;
+  background-size: 80px;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: -3.5em;
+  left: -3.1em;
+}
+.news-forum h2 {
+  position: relative;
+}
+.news-forum h2:before {
+  content: "";
+  background-image: url("../img/icons/forum.png");
+  width: 19px;
+  height: 19px;
+  background-size: 19px;
+  background-repeat: no-repeat;
+  position: absolute;
+  left: 0em;
+}
+.news-calendar h2 {
+  position: relative;
+}
+.news-calendar h2:before {
+  content: "";
+  background-image: url("../img/icons/calendrier.png");
+  width: 19px;
+  height: 19px;
+  background-size: 19px;
+  background-repeat: no-repeat;
+  position: absolute;
+  left: 0em;
+}
+.news-calendar-date {
+  width: 5em;
+  display: inline-block;
+}
 .news-photos {
   clear: both;
   margin-right: 1.3em;
+}
+.news-photos h2 {
+  position: relative;
+}
+.news-photos h2:before {
+  content: "";
+  background-image: url("../img/icons/photos.png");
+  width: 19px;
+  height: 19px;
+  background-size: 19px;
+  background-repeat: no-repeat;
+  position: absolute;
+  left: 0em;
+}
+.news-photos-infos {
+  float: right;
+  width: 15em;
 }
 .acces {
   float: right;
 }
 .news-videos li {
   margin-bottom: 1em;
+}
+.news-videos h2 {
+  position: relative;
+}
+.news-videos h2:before {
+  content: "";
+  background-image: url("../img/icons/videos.png");
+  width: 19px;
+  height: 19px;
+  background-size: 19px;
+  background-repeat: no-repeat;
+  position: absolute;
+  left: 0em;
 }
 .news-videos-infos {
   float: right;
@@ -388,6 +462,7 @@ header {
 .activities-details {
   clear: both;
   padding-top: 2em;
+  height: 12em;
 }
 .activities-details > ul {
   text-align: center;
@@ -441,7 +516,17 @@ em {
 .links div:first-child {
   margin-right: 1.2em;
 }
+.links span:before {
+  content: " - ";
+}
 /*----------------REALISATIONS--------------*/
+.realisations li {
+  margin-bottom: 2em;
+}
+.realisations-infos {
+  float: right;
+  width: 41em;
+}
 /*----------------CALENDRIER--------------*/
 /*----------------ARCHIVES--------------*/
 .concours-interclubs,
@@ -469,6 +554,19 @@ em {
 .contact-form {
   margin-right: 1em;
   margin-bottom: 4em;
+}
+.contact-form h2 {
+  position: relative;
+}
+.contact-form h2:before {
+  content: "";
+  background-image: url("../img/icons/form.png");
+  width: 19px;
+  height: 19px;
+  background-size: 19px 19px;
+  background-repeat: no-repeat;
+  position: absolute;
+  left: 0em;
 }
 .contact-form label {
   display: block;
@@ -542,8 +640,50 @@ em {
   color: #33979f;
   background-color: #f2f8f8;
 }
+.contact-particulars {
+  margin-top: 1em;
+}
 .contact-particulars > div {
   margin-bottom: 4em;
+}
+.contact-post h2 {
+  position: relative;
+}
+.contact-post h2:before {
+  content: "";
+  background-image: url("../img/icons/courrier.png");
+  width: 19px;
+  height: 19px;
+  background-size: 19px 17px;
+  background-repeat: no-repeat;
+  position: absolute;
+  left: 0em;
+}
+.contact-email h2 {
+  position: relative;
+}
+.contact-email h2:before {
+  content: "";
+  background-image: url("../img/icons/email.png");
+  width: 19px;
+  height: 19px;
+  background-size: 19px 19px;
+  background-repeat: no-repeat;
+  position: absolute;
+  left: 0em;
+}
+.contact-phone h2 {
+  position: relative;
+}
+.contact-phone h2:before {
+  content: "";
+  background-image: url("../img/icons/telephone.png");
+  width: 21px;
+  height: 19px;
+  background-size: 21px 16px;
+  background-repeat: no-repeat;
+  position: absolute;
+  left: 0em;
 }
 .visit {
   clear: both;
@@ -556,14 +696,59 @@ em {
 .visit-acces ul {
   margin-right: 1.3em;
 }
+.visit-map img {
+  margin-top: 1.5em;
+}
+.inscription span {
+  font-family: 'Oswald';
+  color: #33979f;
+  display: block;
+  text-align: center;
+}
+.inscription ul {
+  margin: 1em 0 1em 0;
+}
+.inscription .compte {
+  color: #33979f;
+  text-align: center;
+  margin-top: 1em;
+}
 .inscription-member1,
 .inscription-member2 {
   float: left;
 }
 .inscription-member1 {
   margin-right: 1em;
+  position: relative;
+}
+.inscription-member1 > div {
+  margin-bottom: 0.6em;
+}
+.inscription-member1 p {
+  margin-top: 1em;
+}
+.inscription-member1:after {
+  content: "";
+  height: 60px;
+  width: 100px;
+  position: absolute;
+  background-image: url('../img/icons/inscri-arrow.png');
+  top: 18em;
+  right: 10.5em;
+  background-size: 100px;
+  background-repeat: no-repeat;
 }
 .inscription-note {
   clear: both;
+  text-align: center;
+  padding-top: 2em;
+  margin-bottom: 1em;
+}
+.inscription-note .telecharger {
+  font-family: 'Oswald';
+  text-transform: uppercase;
+  position: relative;
+  top: 0.8em;
+  font-size: 1.2em;
 }
 /*----------------FORUM--------------*/

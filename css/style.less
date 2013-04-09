@@ -143,7 +143,7 @@ h2 {
 }
 
 .with-icon {
-	padding-left: 1em;
+	padding-left: 1.4em;
 }
 
 .page {
@@ -330,11 +330,85 @@ header {
 
 .news-contest {
 	margin-right: 1.1em;
+
+	h2 {
+
+		position: relative;
+
+	&:before {
+		content: "";
+		background-image: url("../img/icons/concours.png");
+		width: 80px;
+		height: 80px;
+		background-size: 80px;
+		background-repeat: no-repeat;
+		position: absolute;
+		top: -3.5em;
+		left: -3.1em;
+	}
 }
+
+}
+
+.news-forum {
+	h2 {
+		position: relative;
+	&:before{
+		content: "";
+		background-image: url("../img/icons/forum.png");
+		width: 19px;
+		height: 19px;
+		background-size: 19px;
+		background-repeat: no-repeat;
+		position: absolute;
+		left: 0em;
+	}
+}
+}
+
+.news-calendar {
+		h2 {
+		position: relative;
+	&:before{
+		content: "";
+		background-image: url("../img/icons/calendrier.png");
+		width: 19px;
+		height: 19px;
+		background-size: 19px;
+		background-repeat: no-repeat;
+		position: absolute;
+		left: 0em;
+	}
+}
+}
+
+.news-calendar-date {
+	width: 5em;
+	display: inline-block;
+}
+
 
 .news-photos {
 	clear: both;
 	margin-right: 1.3em;
+	h2 {
+		position: relative;
+	&:before{
+		content: "";
+		background-image: url("../img/icons/photos.png");
+		width: 19px;
+		height: 19px;
+		background-size: 19px;
+		background-repeat: no-repeat;
+		position: absolute;
+		left: 0em;
+	}
+}
+}
+
+.news-photos-infos {
+	float: right;
+	width: 15em;
 }
 
 .acces {
@@ -345,6 +419,19 @@ header {
 	li {
 		margin-bottom: 1em;
 	}
+	h2 {
+		position: relative;
+	&:before{
+		content: "";
+		background-image: url("../img/icons/videos.png");
+		width: 19px;
+		height: 19px;
+		background-size: 19px;
+		background-repeat: no-repeat;
+		position: absolute;
+		left: 0em;
+	}
+}
 }
 
 .news-videos-infos {
@@ -380,6 +467,7 @@ header {
 
 	clear:both;
 	padding-top: 2em;
+	height: 12em;
 
 	>ul {
 		text-align: center;
@@ -444,11 +532,26 @@ em {
 			margin-right: 1.2em;
 		}
 	}
+
+	span:before {
+			content: " - ";
+		}
 }
 
 
 
 /*----------------REALISATIONS--------------*/
+
+.realisations {
+	li {
+		margin-bottom: 2em;
+	}
+}
+
+.realisations-infos {
+	float: right;
+width: 41em;
+}
 
 /*----------------CALENDRIER--------------*/
 
@@ -481,6 +584,21 @@ em {
 .contact-form {
 	margin-right: 1em;
 	margin-bottom: 4em;
+
+	h2 {
+		position: relative;
+	&:before{
+		content: "";
+		background-image: url("../img/icons/form.png");
+		width: 19px;
+		height: 19px;
+		background-size: 19px 19px;
+		background-repeat: no-repeat;
+		position: absolute;
+		left: 0em;
+	}
+}
+
 	label {
 		display: block;
 		margin-bottom: 0.2em;
@@ -551,8 +669,60 @@ em {
 	}
 }
 
-.contact-particulars>div {
+.contact-particulars {
+	margin-top: 1em;
+
+	>div {
 	margin-bottom: 4em;
+	}
+}
+
+.contact-post {
+	h2 {
+		position: relative;
+	&:before{
+		content: "";
+		background-image: url("../img/icons/courrier.png");
+		width: 19px;
+		height: 19px;
+		background-size: 19px 17px;
+		background-repeat: no-repeat;
+		position: absolute;
+		left: 0em;
+	}
+}
+}
+
+.contact-email {
+	h2 {
+		position: relative;
+	&:before{
+		content: "";
+		background-image: url("../img/icons/email.png");
+		width: 19px;
+		height: 19px;
+		background-size: 19px 19px;
+		background-repeat: no-repeat;
+		position: absolute;
+		left: 0em;
+	}
+}
+}
+
+.contact-phone {
+	h2 {
+		position: relative;
+	&:before{
+		content: "";
+		background-image: url("../img/icons/telephone.png");
+		width: 21px;
+		height: 19px;
+		background-size: 21px 16px;
+		background-repeat: no-repeat;
+		position: absolute;
+		left: 0em;
+	}
+}
 }
 
 .visit {
@@ -569,16 +739,73 @@ em {
 	}
 }
 
+.visit-map img {
+	margin-top: 1.5em;
+}
+
+.inscription
+
+{ span {
+	font-family: @oswald;
+	color: @bleu;
+	display: block;
+	text-align: center;
+
+}
+
+	ul {
+		margin: 1em 0 1em 0;
+	}
+
+	.compte {
+		color: @bleu;
+		text-align: center;
+		margin-top: 1em;
+	}
+}
+
 .inscription-member1,.inscription-member2 {
 	float: left;
 }
 
 .inscription-member1 {
 	margin-right: 1em;
+	position: relative;
+
+	>div{
+		margin-bottom: 0.6em;
+	}
+
+		p {
+		margin-top: 1em;
+	}
+
+	&:after{
+		content:"";
+		height: 60px;
+		width: 100px;
+		position: absolute;
+		background-image: url('../img/icons/inscri-arrow.png');
+		top: 18em;
+		right: 10.5em;
+		background-size: 100px;
+		background-repeat: no-repeat;
+	}
 }
 
 .inscription-note {
 	clear: both;
+	text-align: center;
+	padding-top: 2em;
+	margin-bottom: 1em;
+
+	.telecharger {
+		font-family: @oswald;
+		text-transform: uppercase;
+		position: relative;
+		top: 0.8em;
+		font-size: 1.2em;
+	}
 }
 /*----------------FORUM--------------*/
 
