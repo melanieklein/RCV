@@ -542,6 +542,10 @@ em {
 .photos {
   clear: both;
 }
+.photos-albums-infos {
+  float: right;
+  width: 46.7em;
+}
 /*----------------CONTACT--------------*/
 .contact-text {
   margin: 0 auto;
